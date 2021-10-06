@@ -9,19 +9,20 @@ import java.util.Objects;
 @Table(name = "ACCOUNT_TRANSACTION", schema = "HR")
 public class AccountTransaction implements Serializable
 {
+    private static final long serialVersionUID = 4148515931201071681L;
 
-    private static final long serialVersionUID = ;
+
 
     private Long transactionId;
     private AccountType accountType;
     private Long memberId;
-    private Long amount;
+    private Integer amount;
     private LocalDate transactionDate;
 
-    public AccountTransaction() {
+    public AccountTransaction(Long accountTypeId, Integer amount, LocalDate localDate) {
     }
 
-    public AccountTransaction(Long transactionId, AccountType accountType, Long memberId, Long amount,
+    public AccountTransaction(Long transactionId, AccountType accountType, Long memberId, Integer amount,
                               LocalDate transactionDate) {
         this.transactionId = transactionId;
         this.accountType = accountType;
@@ -50,20 +51,20 @@ public class AccountTransaction implements Serializable
     }
 
     @Column(name = "AMOUNT")
-    public Long getAmount() {
+    public Integer getAmount() {
         return amount;
     }
 
-    public void setAmount(Long amount) {
+    public void setAmount(Integer amount) {
         this.amount = amount;
     }
 
     @Column(name = "TRANSACTION_DATE")
-    public LocalDate getTransactionDate() {
+    public LocalDate getcreationDate() {
         return transactionDate;
     }
 
-    public void setTransactionDate(LocalDate transactionDate) {
+    public void setcreationDate(LocalDate transactionDate) {
         this.transactionDate = transactionDate;
     }
 

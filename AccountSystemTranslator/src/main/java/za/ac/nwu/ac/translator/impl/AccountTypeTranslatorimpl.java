@@ -10,27 +10,25 @@ import za.ac.nwu.ac.translator.AccountTypeTranslator;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
-public class AccountTypeTranslatorImpl implements AccountTypeTranslator {
-
+public class AccountTypeTranslatorimpl implements AccountTypeTranslator {
     private final AccountTypeRepository  accountTypeRepository;
 
     @Autowired
-    public AccountTypeTranslatorImpl(AccountTypeRepository accountTypeRepository){
+    public AccountTypeTranslatorimpl(AccountTypeRepository accountTypeRepository){
         this.accountTypeRepository = accountTypeRepository;
     }
 
     @Override
     public List<AccountTypeDto> getAllAccountTypes(){
-        List<AccountTypeDto> accountTypeDtos = new ArrayList<>();
+        List<AccountTypeDto> accountTypeDto = new ArrayList<>();
         try{
             for (AccountType accountType : accountTypeRepository.findAll()) {
-                accountTypeDtos.add(new AccountTypeDto(accountType));
+                accountTypeDto.add(new AccountTypeDto(accountType));
             }
         }catch (Exception e) {
             throw new RuntimeException("Unable to read from the DB", e);
         }
-        return accountTypeDtos;
+        return accountTypeDto;
     }
 
     @Override
