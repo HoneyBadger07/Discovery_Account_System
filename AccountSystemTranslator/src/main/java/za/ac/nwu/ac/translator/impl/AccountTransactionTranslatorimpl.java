@@ -1,5 +1,8 @@
 package za.ac.nwu.ac.translator.impl;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import za.ac.nwu.ac.domain.dto.AccountTransactionDto;
@@ -7,15 +10,12 @@ import za.ac.nwu.ac.domain.persistence.AccountTransaction;
 import za.ac.nwu.ac.repo.persistence.AccountTransactionRepository;
 import za.ac.nwu.ac.translator.AccountTransactionTranslator;
 
-import java.util.ArrayList;
-import java.util.List;
+public class AccountTransactionTranslatorimpl implements AccountTransactionTranslator {
 
-@Component
-public class AccountTransactionTranslatorImpl implements AccountTransactionTranslator {
     private final AccountTransactionRepository repo;
 
     @Autowired
-    public AccountTransactionTranslatorImpl(AccountTransactionRepository repo) {
+    public AccountTransactionTranslatorimpl(AccountTransactionRepository repo) {
         this.repo = repo;
     }
 
