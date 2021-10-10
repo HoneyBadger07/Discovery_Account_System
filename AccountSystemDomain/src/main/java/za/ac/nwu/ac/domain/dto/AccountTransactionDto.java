@@ -63,7 +63,7 @@ public class AccountTransactionDto implements Serializable {
             name = "Amount",
             notes = "Amount on the member's account",
             dataType = "java.lang.String",
-            example = "200",
+            example = "50",
             required = true
     )
     public Integer getAmount() {
@@ -80,7 +80,7 @@ public class AccountTransactionDto implements Serializable {
             name = "creationDate",
             notes = "The date the transaction occurred",
             dataType = "java.lang.String",
-            example = "2021-02-01",
+            example = "2021-10-31",
             required = true
     )
     public LocalDate getcreationDate() {
