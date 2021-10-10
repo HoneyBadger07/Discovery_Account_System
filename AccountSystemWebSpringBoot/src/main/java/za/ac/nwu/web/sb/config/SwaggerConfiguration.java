@@ -1,4 +1,4 @@
-package za.ac.nwu.web.ab.config;
+package za.ac.nwu.web.sb.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
