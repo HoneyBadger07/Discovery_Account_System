@@ -1,4 +1,4 @@
-package za.ac.nwu.web.ab.controller;
+package za.ac.nwu.web.sb.controller;
 
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -6,7 +6,6 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,7 +14,6 @@ import za.ac.nwu.ac.domain.service.GeneralResponse;
 import za.ac.nwu.ac.logic.flow.impl.CreateAccountTypeFlow;
 import za.ac.nwu.ac.logic.flow.impl.FetchAccountTypeFlow;
 
-import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -65,7 +63,7 @@ public class AccountTypeController {
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 
-    @GetMapping("{mnemonic}")
+    @GetMapping("/{mnemonic}")
     @ApiOperation(value = "Fetches the specified AccountType.", notes = "Fetches the AccountType with the same " +
             "mnemonic")
     @ApiResponses(value = {

@@ -1,4 +1,4 @@
-package za.ac.nwu.web.ab.controller;
+package za.ac.nwu.web.sb.controller;
 
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
